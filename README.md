@@ -12,7 +12,7 @@ wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.
 chmod +x shadowsocks-all.sh
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 ```
-### SSR-Panel 安装 ###
+### SSR-Panel 安装 in Ubuntu ###
 ```PowerShell
 apt-get update
 apt-get -y install python3-pip
