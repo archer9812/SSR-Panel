@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SSR用户登录</title>
+  <meta name="description" content="SSR面板登录">
+  <meta name="keywords" content="用户登录">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="/static/home/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="/static/home/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="登录" />
+  <link rel="stylesheet" href="/static/home/css/amazeui.min.css" />
+  <link rel="stylesheet" href="/static/home/css/admin.css">
+  <link rel="stylesheet" href="/static/home/css/app.css">
+</head>
+
+<body data-type="login">
+
+  <div class="am-g myapp-login">
+	<div class="myapp-login-logo-block  tpl-login-max">
+		<div class="myapp-login-logo-text">
+			<div class="myapp-login-logo-text">
+				用户<span> 登录</span><br><i class="am-icon-skyatlas"></i>
+				
+			</div>
+		</div>
+		{%for msg in get_flashed_messages(category_filter=['error'])%}
+		<div class="login-font">
+				<span class="label label-danger">{{msg}}</span>
+		</div>
+		{% endfor %}
+
+		<div class="am-u-sm-10 login-am-center">
+			<form class="am-form" method="POST">
+				<fieldset>
+					<div class="am-form-group">
+						{{form.name}}
+					</div>
+					<div class="am-form-group">
+						{{form.pwd}}
+					</div>
+					<p><button class="am-btn am-btn-default" type="submit">登录</button></p>
+					{{form.csrf_token}}
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+  <script src="/static/home/js/jquery.min.js"></script>
+  <script src="/static/home/js/amazeui.min.js"></script>
+  <script src="/static/home/js/app.js"></script>
+</body>
+
+</html>

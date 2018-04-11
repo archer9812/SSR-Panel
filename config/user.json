@@ -1,0 +1,1 @@
+{"userlist": [{"username": "admin", "password": "admin", "ssr": {"port": "8989", "password": "password1", "method": "chacha20", "protocol": "auth_sha1_v4", "obfs": "http_simple"}}]}
