@@ -21,8 +21,8 @@ pip3 install --upgrade pip
 wget https://github.com/archer9812/SSR-Panel/archive/master.zip
 pip3 install flask
 pip3 install flask_wtf
-unzip shadowsocksr-panel.zip
-cd project-shadowsocksr-panel
+unzip SSR-Panel-master.zip
+cd SSR-Panel-master
 cp -f config/config.json /etc/shadowsocks-r/config.json
 nohup python3 manage.py
 ```
